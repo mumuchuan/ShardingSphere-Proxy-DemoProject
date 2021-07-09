@@ -61,7 +61,25 @@
 #  lock-wait-timeout-milliseconds: 50000 # The maximum time to wait for a lock
 
 
-#port：3307
+####port：3307
+
+
+
+#governance:
+#  name: governance_ds
+#  registryCenter:
+#    type: ZooKeeper
+#    serverLists: localhost:2181
+#    props:
+#      retryIntervalMilliseconds: 500
+#      timeToLiveSeconds: 60
+#      maxRetries: 3
+#      operationTimeoutMilliseconds: 500
+#  overwrite: true
+
+#scaling:
+#  blockQueueSize: 10000
+#  workerThread: 40
 
 rules:
   - !AUTHORITY
